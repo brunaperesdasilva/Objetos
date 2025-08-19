@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA Completa</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body data-theme="claro">
+    <header>
+        <h1>Objetos</h1>
+        <nav>
+            <button onclick="mostrarSecao('contador')">Contador Interativo</button>
+            <button onclick="mostrarSecao('galeria')">Galeria de Imagens</button>
+            <button onclick="mostrarSecao('cadastro')">Cadastro</button>
+            <button onclick="document.body.setAttribute('data-theme','claro')">Tema Claro</button>
+            <button onclick="document.body.setAttribute('data-theme','escuro')">Tema Escuro</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contador" class="secao ativo">
+            <h2>Contador Interativo</h2>
+            <div class="contador-container">
+                <input id="passo" type="number" placeholder="Digite o passo" min="0">
+                <div class="botoes-contador">
+                    <button id="incremento">+</button>
+                    <span id="valorContador">0</span>
+                    <button id="decremento">-</button>
+                </div>
+            </div>
+        </section>
+
+      
+        <section id="galeria" class="secao">
+            <h2>Galeria de Imagens</h2>
+            <div id="cardsContainer" class="galeria"></div>
+        </section>
+
+        
+        <section id="cadastro" class="secao">
+            <h2>Cadastro de Imagens</h2>
+            <form id="formCadastro">
+                <label for="nome">Descrição da imagem:</label>
+                <input id="nome" type="text" placeholder="Digite a descrição...">
+                <label for="img">URL da imagem:</label>
+                <input id="img" type="text" placeholder="Informe a URL...">
+                <button type="button" id="btnSalvar">Salvar</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
